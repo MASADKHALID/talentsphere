@@ -1,0 +1,179 @@
+.applications-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.applications-container h1 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.applications-list {
+  display: grid;
+  gap: 20px;
+}
+
+.application-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.application-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 15px;
+}
+
+.application-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-applied {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.status-reviewed {
+  background-color: #fff3e0;
+  color: #f57c00;
+}
+
+.status-interview {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.status-accepted {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.status-rejected {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+.application-card .company {
+  font-weight: 500;
+  color: var(--muted-text);
+  margin: 5px 0;
+}
+
+.application-card .location {
+  color: var(--subtle-text);
+}
+
+.applied-date {
+  font-size: 12px;
+  color: var(--subtle-text);
+  margin-top: 10px;
+}
+
+.cover-letter {
+  background-color: var(--light-bg);
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.cover-letter strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.cover-letter p {
+  color: var(--muted-text);
+  line-height: 1.5;
+}
+
+.rating-display {
+  background-color: #f0fdf4;
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+  border-left: 4px solid #10b981;
+}
+
+.rating-display strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #047857;
+}
+
+.rating-display p {
+  margin: 5px 0 0 0;
+  color: #666;
+}
+
+.rating-form {
+  background-color: var(--light-bg);
+  padding: 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.rating-form .form-group {
+  margin-bottom: 15px;
+}
+
+.rating-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.rating-stars {
+  display: flex;
+  gap: 5px;
+}
+
+.rating-stars .star {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  filter: grayscale(100%);
+  transition: filter 0.2s;
+}
+
+.rating-stars .star.active {
+  filter: grayscale(0%);
+}
+
+.rating-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.candidate-meta {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}.application-card button {
+  margin-top: 15px;
+}
+
+.candidate-meta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}

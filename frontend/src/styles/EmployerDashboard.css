@@ -1,0 +1,136 @@
+.employer-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.employer-dashboard h1 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.employer-dashboard > button {
+  margin-bottom: 30px;
+}
+
+.job-form {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-form h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+}
+
+.jobs-section {
+  margin-top: 40px;
+}
+
+.jobs-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.jobs-grid .job-card {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.jobs-grid .job-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.jobs-grid .location {
+  color: #999;
+  margin: 10px 0;
+}
+
+.jobs-grid .job-type {
+  display: inline-block;
+  background-color: var(--light-bg);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.jobs-grid .applications {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.card-actions button {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+}
