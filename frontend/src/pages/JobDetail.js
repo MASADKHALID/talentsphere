@@ -19,7 +19,7 @@ function JobDetail() {
 
   useEffect(() => {
     fetchJob();
-  }, [id]);
+  }, [id, fetchJob]);
 
   const fetchJob = async () => {
     setLoading(true);

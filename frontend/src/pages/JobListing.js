@@ -13,7 +13,7 @@ function JobListing() {
 
   useEffect(() => {
     fetchJobs();
-  }, [search, location, jobType]);
+  }, [search, location, jobType, fetchJobs]);
 
   const fetchJobs = async () => {
     setLoading(true);
