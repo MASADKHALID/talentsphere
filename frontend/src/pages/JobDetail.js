@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { jobService, applicationService, userService } from '../services/api';
@@ -17,11 +17,7 @@ function JobDetail() {
   const [isFollowing, setIsFollowing] = useState(false);
   const [followLoading, setFollowLoading] = useState(false);
 
-  useEffect(() => {
-    fetchJob();
-  }, [id, fetchJob]);
-
-  const fetchJob = async () => {
+  const fetchJob = useCallback(async () => {
     setLoading(true);
     try {
       const response = await jobService.getJob(id);
@@ -32,7 +28,11 @@ function JobDetail() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [id]);
+
+  useEffect(() => {
+    fetchJob();
+  }, [fetchJob]);
 
   const handleApply = async (e) => {
     e.preventDefault();

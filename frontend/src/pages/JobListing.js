@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { jobService } from '../services/api';
 import '../styles/JobListing.css';
@@ -11,11 +11,7 @@ function JobListing() {
   const [location, setLocation] = useState('');
   const [jobType, setJobType] = useState('');
 
-  useEffect(() => {
-    fetchJobs();
-  }, [search, location, jobType, fetchJobs]);
-
-  const fetchJobs = async () => {
+  const fetchJobs = useCallback(async () => {
     setLoading(true);
     try {
       const params = {};
@@ -31,7 +27,11 @@ function JobListing() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [search, location, jobType]);
+
+  useEffect(() => {
+    fetchJobs();
+  }, [fetchJobs]);
 
   return (
     <div className="job-listing-container">
