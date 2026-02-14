@@ -13,8 +13,14 @@ const notificationRoutes = require('./routes/notificationRoutes');
 const app = express();
 
 // Middleware
+
+const allowedOrigins = [
+  "http://talentsphere-sigma.vercel.app",
+  "http://localhost:3000"
+];
 app.use(cors({
-  origin: "https://talentsphere-sigma.vercel.app"
+  origin: allowedOrigins,
+  credentials: true
 }));
 
 app.use(cors());
