@@ -17,22 +17,22 @@ function JobDetail() {
   const [isFollowing, setIsFollowing] = useState(false);
   const [followLoading, setFollowLoading] = useState(false);
 
-  const fetchJob = useCallback(async () => {
-    setLoading(true);
-    try {
-      const response = await jobService.getJob(id);
-      setJob(response.data.job);
-      setError('');
-    } catch (err) {
-      setError('Failed to fetch job details');
-    } finally {
-      setLoading(false);
-    }
-  }, [id]);
+  // const fetchJob = useCallback(async () => {
+  //   setLoading(true);
+  //   try {
+  //     const response = await jobService.getJob(id);
+  //     setJob(response.data.job);
+  //     setError('');
+  //   } catch (err) {
+  //     setError('Failed to fetch job details');
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // }, [id]);
 
-  useEffect(() => {
-    fetchJob();
-  }, [fetchJob]);
+  // useEffect(() => {
+  //   fetchJob();
+  // }, [fetchJob]);
 
   const handleApply = async (e) => {
     e.preventDefault();
