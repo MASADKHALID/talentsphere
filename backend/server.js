@@ -15,7 +15,7 @@ const app = express();
 // Middleware
 
 const allowedOrigins = [
-  "http://talentsphere-sigma.vercel.app",
+  "https://talentsphere-sigma.vercel.app",
   "http://localhost:3000"
 ];
 app.use(cors({
