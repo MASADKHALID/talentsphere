@@ -13,9 +13,9 @@ const notificationRoutes = require('./routes/notificationRoutes');
 const app = express();
 
 // Middleware
-//app.use(cors({
-//  origin: "https://talentsphere-sigma.vercel.app"
-//}));
+app.use(cors({
+  origin: "https://talentsphere-sigma.vercel.app"
+}));
 
 app.use(cors());
 app.use(express.json());
