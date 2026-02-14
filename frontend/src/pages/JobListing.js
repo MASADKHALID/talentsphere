@@ -11,27 +11,27 @@ function JobListing() {
   const [location, setLocation] = useState('');
   const [jobType, setJobType] = useState('');
 
-  // const fetchJobs = useCallback(async () => {
-  //   setLoading(true);
-  //   try {
-  //     const params = {};
-  //     if (search) params.search = search;
-  //     if (location) params.location = location;
-  //     if (jobType) params.jobType = jobType;
-  //
-  //     const response = await jobService.getJobs(params);
-  //     setJobs(response.data.jobs);
-  //     setError('');
-  //   } catch (err) {
-  //     setError('Failed to fetch jobs');
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // }, [search, location, jobType]);
+  const fetchJobs = useCallback(async () => {
+    setLoading(true);
+    try {
+      const params = {};
+      if (search) params.search = search;
+      if (location) params.location = location;
+      if (jobType) params.jobType = jobType;
 
-  // useEffect(() => {
-  //   fetchJobs();
-  // }, [fetchJobs]);
+      const response = await jobService.getJobs(params);
+      setJobs(response.data.jobs);
+      setError('');
+    } catch (err) {
+      setError('Failed to fetch jobs');
+    } finally {
+      setLoading(false);
+    }
+  }, [search, location, jobType]);
+
+  useEffect(() => {
+    fetchJobs();
+  }, [fetchJobs]);
 
   return (
     <div className="job-listing-container">
