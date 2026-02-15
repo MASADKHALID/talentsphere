@@ -13,11 +13,6 @@ const notificationRoutes = require('./routes/notificationRoutes');
 const app = express();
 
 // Middleware
-
-//app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
 const allowedOrigins = [
   "https://talentsphere-sigma.vercel.app",
   "http://localhost:3000"
@@ -26,6 +21,11 @@ app.use(cors({
   origin: allowedOrigins,
   credentials: true
 }));
+//app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+
 // Connect to database
 connectDB();
 
